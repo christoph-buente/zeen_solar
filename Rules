@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+require 'compass'
+Compass.add_project_configuration 'config/compass.config'
+
+compile '/stylesheets/_*' do # don't compile partials
+  nil
+end
+
+compile '/stylesheets/*' do
+  filter :sass, Compass.sass_engine_options
+end
+
+compile '*' do
+  @item[:extension] == 'haml' ? (filter :haml) : (filter :kramdown)
+  
+  layout 'application'
+end
+
+route '/stylesheets/_*/' do
+  nil
+end
+
+route '/stylesheets/*/' do
+  '/assets' + item.identifier.chop + '.css'
+end
+
+route '*' do
+  ext = item.identifier == '/kontakt/' ? 'php' : 'html'
+  item.identifier + 'index.' + ext
+end
+
+layout '*', :haml, :format => :html5
+
+

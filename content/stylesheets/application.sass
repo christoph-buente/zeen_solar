@@ -1,0 +1,91 @@
+=square-drop-shadow
+  :-moz-box-shadow 5px 5px 10px #666
+  :-webkit-box-shadow 5px 5px 10px #666
+  :-khtml-box-shadow 5px 5px 10px #666
+  :box-shadow 5px 5px 10px #666
+
+=current-square-drop-shadow
+  :-moz-box-shadow 5px 5px 10px #1A623D
+  :-webkit-box-shadow 5px 5px 10px #1A623D
+  :-khtml-box-shadow 5px 5px 10px #1A623D
+  :box-shadow 5px 5px 10px #1A623D
+  
+=big-left-corner
+  :-moz-border-radius-topleft 17px
+  :-webkit-border-top-left-radius 17px
+  :-khtml-border-top-left-radius 17px
+  :border-top-left-radius 17px
+
+=left-corner
+  :-moz-border-radius-topleft 15px
+  :-webkit-border-top-left-radius 15px
+  :-khtml-border-top-left-radius 15px
+  :border-top-left-radius 15px
+
+=right-bottom-corner
+  :-moz-border-radius-bottomright 15px
+  :-webkit-border-bottom-right-radius 15px
+  :-khtml-border-bottom-right-radius 15px
+  :border-bottom-right-radius 15px
+
+=link-shadow  
+  :text-shadow #000 0px 0px 4px
+  
+@import "reset"
+@import "text"
+@import "960"
+@import "formtastic"
+@import "header"
+@import "main"
+@import "navigation"
+@import "kicker"
+
+body
+  background-color: #f7fff2
+  font:
+    family: Verdana
+    size: 10pt
+    
+#content
+  background: #D2D9D5 url('../images/background_content.png') repeat-x 0 0 
+  min-height: 700px  
+  padding-bottom: 40px
+
+#message
+  padding: 20px
+  font-size: 18px
+  background-color: #FFF
+  border: 1px solid #000
+  text-align: center
+  margin-bottom: 10px
+
+#breadcrumbs
+  position: relative
+  bottom: 40px
+  a
+    color: #000
+    text-decoration: none
+.zeen_grundsaetze
+  li
+    margin-bottom: 1.0em
+    
+#verzeichnisse
+  margin-top: 40px
+	
+a.button
+  +left-corner
+  +right-bottom-corner
+  border: 1px solid #7A896C
+  color: #00923F
+  display: block
+  font-size: 18px
+  font-weight: bold
+  letter-spacing: 1px
+  margin: auto auto 30px
+  padding: 15px
+  text-align: center
+  width: 260px
+  
+a.button:hover
+  background-color: #ddd
+  border: 1px solid #555

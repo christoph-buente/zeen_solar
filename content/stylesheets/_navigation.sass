@@ -1,0 +1,59 @@
+#side_navigation, #top_navigation
+    
+  .small
+    height: 50px
+    margin-bottom: 16px
+    text-align: center
+  
+    a
+      h4
+        position: relative
+        bottom: 54px
+        font-size: 12px
+  
+  .square
+    height: 130px
+    margin-bottom: 14px
+    text-align: center
+    padding-bottom: 10px
+  
+    a
+      h4
+        position: relative
+        bottom: 130px
+        font-size: 12px
+        text-align: center
+  
+  .square, .small
+    &.current
+      a
+        +link-shadow
+        
+        img
+          +current-square-drop-shadow
+          border: 1px solid #FFF
+        
+        h4
+          color: #d7f9e9
+          text-decoration: underline
+          text-align: center
+        
+  
+    a
+      font-weight: bold
+      text-decoration: none
+      color: #FFF
+      +link-shadow
+      img
+        border: 1px solid #D2D9D5
+        margin-top: 5px
+        +square-drop-shadow
+      
+    a:hover
+      img
+        +current-square-drop-shadow
+        border: 1px solid #FFF
+      
+      h4
+        color: #d7f9e9
+        text-decoration: underline

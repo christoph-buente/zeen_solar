@@ -1,0 +1,23 @@
+%aside
+  .square{:class => @item_rep.path == '/' ? 'current' : ''}
+    %a{:href => '/', :title => 'Home'}
+      %img{ :src => '/assets/images/home.jpg', :width => 138, :height => 138, :alt => 'Logo Zeen Startseite'}
+      %h4
+        = "Home"
+
+  .square{:class => @item_rep.path == '/kontakt/' ? 'current' : ''}
+    %a{:href => '/kontakt/', :title => 'Kontakt'}
+      %img{ :src => '/assets/images/kontakt.jpg', :width => 138, :height => 138, :alt => 'Logo Zeen Kontakt'}
+      %h4
+        = "Kontakt"
+                
+  .square{:class => @item_rep.path == '/zeen_grundsaetze/' ? 'current' : ''}
+    %a{:href => '/zeen_grundsaetze/', :title => 'Zeen Grundsätze'}
+      %img{ :src => '/assets/images/gebote.jpg', :width => 138, :height => 138, :alt => 'Logo Zeen Grundsätze'}
+      %h4
+        = "Zeen Grundsätze"
+
+
+
+
+
